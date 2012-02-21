@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+/*
+ * Copyright (C) 2012 VSPLF Software Foundation
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+ -->
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <groupId>org.vsplf</groupId>
+  <artifactId>vsplf-parent</artifactId>
+  <version>0.1.0-SNAPSHOT</version>
+  <packaging>pom</packaging>
+
+  <name>vsplf-parent</name>
+  <description>Provides default project configuration for VSPLF Software Foundation projects</description>
+
+  <organization>
+    <name>VSPLF Software Foundation (VSF)</name>
+    <url>http://vsplf.org</url>
+  </organization>
+
+  <licenses>
+    <license>
+    <name>The Apache Software License, Version 2.0</name>
+    <url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
+    <distribution>repo</distribution>
+    </license>
+  </licenses>
+
+  <scm>
+    <connection>scm:git:git://github.com/vsplf/vsplf-parent.git</connection>
+    <developerConnection>scm:git:ssh://git@github.com/vsplf/vsplf-parent.git</developerConnection>
+    <url>https://github.com/vsplf/vsplf-parent</url>
+  </scm>
+
+  <issueManagement>
+    <system>github</system>
+    <url>https://github.com/vsplf/vsplf-parent/issues</url>
+  </issueManagement>
+  <!--
+  <ciManagement>
+    <system>jenkins</system>
+    <url>https://ci.vsplf.org/job/vsplf-parent-master-ci</url>
+  </ciManagement>
+  -->
+
+  <distributionManagement>
+    <repository>
+      <id>repository.vsplf.org</id>
+      <url>${vsplf.releases.repo.url}</url>
+    </repository>
+    <snapshotRepository>
+      <id>repository.vsplf.org</id>
+      <url>${vsplf.snapshots.repo.url}</url>
+    </snapshotRepository>
+  </distributionManagement>
+
+  <properties>
+    <vsplf.product.name>${project.name}</vsplf.product.name>
+    <vsplf.releases.repo.url>dav:https://repository-vsplf.forge.cloudbees.com/release/</vsplf.releases.repo.url>
+    <vsplf.snapshots.repo.url>dav:https://repository-vsplf.forge.cloudbees.com/snapshot/</vsplf.snapshots.repo.url>
+    <vsplf.public.repo.url>https://repository-vsplf.forge.cloudbees.com/release/</vsplf.public.repo.url>
+
+    <!-- ************** -->
+    <!-- Build settings -->
+    <!-- ************** -->
+    <!-- Cross plugins settings -->
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+
+    <!-- maven-compiler-plugin -->
+    <maven.compiler.target>1.5</maven.compiler.target>
+    <maven.compiler.source>1.5</maven.compiler.source>
+    <maven.compiler.showDeprecation>true</maven.compiler.showDeprecation>
+    <maven.compiler.showWarnings>true</maven.compiler.showWarnings>
+    <maven.compiler.optimize>true</maven.compiler.optimize>
+
+    <!-- maven-enforcer-plugin -->
+    <maven.min.version>3.0.0</maven.min.version>
+    <jdk.min.version>${maven.compiler.source}</jdk.min.version>
+  </properties>
+
+</project>
