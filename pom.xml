@@ -51,12 +51,11 @@
     <system>github</system>
     <url>https://github.com/vsplf/vsplf-parent/issues</url>
   </issueManagement>
-  <!--
+
   <ciManagement>
     <system>jenkins</system>
-    <url>https://ci.vsplf.org/job/vsplf-parent-master-ci</url>
+    <url>https://vsplf.ci.cloudbees.com/job/vsplf-parent-master-ci/</url>
   </ciManagement>
-  -->
 
   <distributionManagement>
     <repository>
@@ -91,6 +90,34 @@
     <!-- maven-enforcer-plugin -->
     <maven.min.version>3.0.0</maven.min.version>
     <jdk.min.version>${maven.compiler.source}</jdk.min.version>
+
+    <!-- maven plugins -->
+    <maven-checkstyle-plugin.version>2.9</maven-checkstyle-plugin.version>
+    <maven-project-info-reports-plugin.version>2.4</maven-project-info-reports-plugin.version>
+    <maven-site-plugin.version>3.0</maven-site-plugin.version>
+
   </properties>
+
+  <build>
+    <pluginManagement>
+      <plugins>
+        <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-checkstyle-plugin</artifactId>
+          <version>${maven-checkstyle-plugin.version}</version>
+        </plugin>
+        <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-project-info-reports-plugin</artifactId>
+          <version>${maven-project-info-reports-plugin.version}</version>
+        </plugin>
+        <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-site-plugin</artifactId>
+          <version>${maven-site-plugin.version}</version>
+        </plugin>
+      </plugins>
+    </pluginManagement>
+  </build>
 
 </project>
