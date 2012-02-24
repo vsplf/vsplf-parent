@@ -124,6 +124,11 @@
                 <artifactId>maven-javadoc-plugin</artifactId>
                 <version>${maven-java-doc-plugin.version}</version>
               </plugin>
+              <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-checkstyle-plugin</artifactId>
+                <version>${maven-checkstyle-plugin.version}</version>
+              </plugin>
             </reportPlugins>
           </configuration>
         </plugin>
