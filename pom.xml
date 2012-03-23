@@ -127,6 +127,12 @@
 
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-jxr-plugin</artifactId>
+          <version>${maven-jxr-plugin.version}</version>
+        </plugin>
+
+        <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-deploy-plugin</artifactId>
           <version>${maven-deploy-plugin.version}</version>
           <!-- Required by Maven 3+ to deploy artifacts in webdav -->
@@ -137,6 +143,30 @@
               <version>${wagon-webdav-jackrabbit.version}</version>
             </dependency>
           </dependencies>
+        </plugin>
+
+        <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-javadoc-plugin</artifactId>
+          <version>${maven-java-doc-plugin.version}</version>
+        </plugin>
+
+        <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-checkstyle-plugin</artifactId>
+          <version>${maven-checkstyle-plugin.version}</version>
+        </plugin>
+
+        <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-pmd-plugin</artifactId>
+          <version>${maven-pmd-plugin.version}</version>
+        </plugin>
+
+        <plugin>
+          <groupId>org.codehaus.mojo</groupId>
+          <artifactId>findbugs-maven-plugin</artifactId>
+          <version>${findbugs-maven-plugin.version}</version>
         </plugin>
 
         <plugin>
@@ -181,5 +211,14 @@
       </plugins>
     </pluginManagement>
   </build>
+
+  <developers>
+    <developer>
+      <name>Hoat Le</name>
+      <email>hoatlevan at gmail dot com</email>
+      <timezone>GMT+07</timezone>
+      <organization>VSPLF</organization>
+    </developer>
+  </developers>
 
 </project>
