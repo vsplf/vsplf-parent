@@ -47,8 +47,8 @@
   </scm>
 
   <issueManagement>
-    <system>github</system>
-    <url>https://github.com/vsplf/vsplf-parent/issues</url>
+    <system>jira</system>
+    <url>https://vs-plf.atlassian.net/browse/PARENT</url>
   </issueManagement>
 
   <ciManagement>
